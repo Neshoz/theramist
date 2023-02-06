@@ -19,6 +19,6 @@ import app from "./app";
 
   process.on("SIGINT", () => {
     client.end();
-    process.exit();
+    process.exit(1);
   });
 })();

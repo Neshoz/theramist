@@ -4,7 +4,7 @@
   "main": "src/index.ts",
   "license": "MIT",
   "scripts": {
-    "build": "rm -rf build && tsc -b",
+    "build": "tsc -b",
     "start": "nodemon"
   },
   "dependencies": {

@@ -4,13 +4,29 @@ services:
     container_name: api
     build:
       context: .
-      dockerfile: packages/api/Dockerfile
+      dockerfile: ./packages/api/Dockerfile
     ports:
       - "8000:80"
   engine:
     container_name: engine
     build:
       context: .
-      dockerfile: packages/engine/Dockerfile
+      dockerfile: ./packages/engine/Dockerfile
     ports:
       - "8001:80"
+  postgres:
+    container_name: postgres
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=thermonitor
+    build:
+      context: .
+      dockerfile: ./packages/db/Dockerfile
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./sql/1_init.sql:/docker-entrypoint/initdb.d/1_init.sql
+volumes:
+  sql:

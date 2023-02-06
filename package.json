@@ -1,9 +1,6 @@
 {
   "name": "thermonitor",
   "private": true,
-  "scripts": {
-    "docker:build:api": "docker build -t api -f packages/api/Dockerfile ."
-  },
   "workspaces": {
     "packages": [
       "packages/*"

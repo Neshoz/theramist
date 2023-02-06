@@ -63,6 +63,6 @@ import { Thermostat } from "./thermostat";
 
   process.on("SIGINT", () => {
     client.end();
-    process.exit();
+    process.exit(1);
   });
 })();

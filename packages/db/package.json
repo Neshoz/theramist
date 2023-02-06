@@ -7,11 +7,8 @@
     "build": "tsc -b",
     "start": "docker run -d --name postgres-container postgres"
   },
-  "dependencies": {
-    "pg": "^8.9.0"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "@types/pg": "^8.6.6",
     "ts-node": "^10.9.1",
     "typescript": "^4.9.5"
   }
