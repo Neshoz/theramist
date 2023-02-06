@@ -1,0 +1,13 @@
+{
+  "name": "@thermonitor/common",
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc -b"
+  },
+  "dependencies": {
+    "mqtt": "^4.3.7",
+    "typescript": "^4.9.5"
+  }
+}

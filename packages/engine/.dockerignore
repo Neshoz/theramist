@@ -1,0 +1,12 @@
+.git
+Dockerfile
+README.md
+.vscode
+node_modules
+npm-debug.log
+**/*.swp
+**/*.tsx~
+**/*.swn
+**/*.swo
+**/build/**
+**/*.tsbuildinfo
