@@ -1,6 +1,9 @@
 {
   "name": "thermonitor",
   "private": true,
+  "scripts": {
+    "start": "bash ./local-cluster/start.sh"
+  },
   "workspaces": {
     "packages": [
       "packages/*"

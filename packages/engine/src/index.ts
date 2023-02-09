@@ -57,7 +57,7 @@ import { Thermostat } from "./thermostat";
 
   const port: number = Number.parseInt(process.env.PORT as string) || 8001;
 
-  app().listen(port, "0.0.0.0", () => {
+  app().listen(port, () => {
     console.log(`engine is running on port: ${port}`);
   });
 

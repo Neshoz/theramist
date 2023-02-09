@@ -1,9 +1,7 @@
-import dotenv from "dotenv";
 import { createMqttClient } from "@thermonitor/common";
 import app from "./app";
 
 (() => {
-  console.log("db", process.env.PGDATABASE);
   const client = createMqttClient();
   client.subscribe("temp");
 
@@ -13,7 +11,7 @@ import app from "./app";
 
   const port: number = Number.parseInt(process.env.PORT as string) || 8000;
 
-  app().listen(port, "0.0.0.0", () => {
+  app().listen(port, () => {
     console.log(`api is running on port: ${port}`);
   });
 
