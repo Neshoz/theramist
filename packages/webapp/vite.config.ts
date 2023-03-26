@@ -5,10 +5,11 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   plugins: [react()],
   server: {
+    host: "app.thermonitor.local",
     port: 3000,
     proxy: {
       "/api": {
-        target: "http://api.visilion.local",
+        target: "http://api.thermonitor.local",
         changeOrigin: true,
       },
     },

@@ -25,4 +25,5 @@ async function query<R extends QueryResultRow = any, I extends any[] = any[]>(
 
 export const db = {
   query,
+  pool,
 };

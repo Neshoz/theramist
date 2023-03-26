@@ -1,14 +1,5 @@
+import { ApiError } from "@thermonitor/common";
 import { NextFunction, Request, Response } from "express";
-
-export class ApiError extends Error {
-  code: number;
-
-  constructor(code: number, message?: string) {
-    super();
-    this.code = code;
-    this.message = message || "Internal server error";
-  }
-}
 
 export function errorHandlerMiddleware(
   error: Error,
@@ -21,7 +12,7 @@ export function errorHandlerMiddleware(
   }
 
   if (error instanceof ApiError) {
-    return res.status(error.code).json({
+    return res.status(error.status).json({
       message: error.message,
     });
   }
